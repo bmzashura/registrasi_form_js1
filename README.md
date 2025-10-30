@@ -1,50 +1,81 @@
 # registrasi_form_js1
 
-This template should help get you started developing with Vue 3 in Vite.
+A small Vue 3 + Vite demo app that contains a simple registration form.
 
-## Recommended IDE Setup
+## About this app
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+The app shows a registration form with two fields:
 
-## Recommended Browser Setup
+- `Nama Depan` (first name)
+- `Nama Belakang` (last name)
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+When the user fills the fields and clicks the submit button, the app writes a single line to the browser console in this format:
 
-## Customize configuration
+```
+Nama Lengkap : [Nama Depan] [Nama Belakang]
+```
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+This repository includes a screenshot of the result at `src/assets/hasil.png`.
 
-## Project Setup
+## How to run
 
-```sh
+1. Install dependencies:
+
+```powershell
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+2. Start the dev server:
 
-```sh
+```powershell
 npm run dev
 ```
 
-### Compile and Minify for Production
+3. Open the app in your browser (Vite will print the local URL, typically `http://localhost:5173`).
 
-```sh
+4. Open the browser Developer Tools Console to see the output when you submit the form.
+
+## Interaksi dengan form (Cara pakai)
+
+1. Isi kolom `Nama Depan`.
+2. Isi kolom `Nama Belakang`.
+3. Klik tombol `Kirim`.
+4. Buka Console (Developer Tools) — Anda akan melihat satu baris seperti:
+
+```
+Nama Lengkap : Budi Santoso
+```
+
+Catatan: Form menggunakan `preventDefault` pada submit sehingga halaman tidak akan reload.
+
+## Hasil (screenshot)
+
+Di bawah ini adalah gambar contoh hasil interaksi (termasuk console). Jika Anda ingin melihat gambar secara lokal, buka `src/assets/hasil.png`.
+
+![Hasil Interaksi](src/assets/hasil.png)
+
+## Recommended IDE & Browser Setup
+
+- VS Code + Vue tooling (Volar)
+- A Chromium-based browser with Vue devtools (optional)
+
+## Lain-lain — Perintah berguna
+
+- Build untuk produksi:
+
+```powershell
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+- Jalankan unit tests (Vitest):
 
-```sh
+```powershell
 npm run test:unit
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+- Lint code:
 
-```sh
+```powershell
 npm run lint
 ```
+
